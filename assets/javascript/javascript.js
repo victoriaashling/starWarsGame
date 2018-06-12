@@ -9,6 +9,7 @@ $(document).ready(function() {
 
     var currentPlayer;
     var currentDefender;
+    var enemyIsDead;
 
 
     function displayChoices() {
@@ -34,10 +35,18 @@ $(document).ready(function() {
         avatars[3].improvedAttack = 0;
     }
 
-    displayChoices();
+    function restartGame() {
+        $("#restart").hide();
+        $("#damage-stats").empty();
+        enemyIsDead = true;
+        currentPlayer = "";
+        currentDefender = "";
+        displayChoices();
+        $(".avatar").css({backgroundColor: "white", color: "black"});
+    };
 
-    enemyIsDead = true;
-    $("#restart").hide();
+    restartGame();
+
 
     $(".avatar").click( function() {
         if ($("#playerChar").is(":empty")) {
@@ -47,10 +56,12 @@ $(document).ready(function() {
         }
         else {
             if (enemyIsDead) {
-                $(this).detach().appendTo("#defender").css({backgroundColor: "red", color: "black"}); 
-                currentDefender = this.id;
-                enemyIsDead = false;
-                $("#damage-stats").empty();
+                if (this.id != currentPlayer) {
+                    $(this).detach().appendTo("#defender").css({backgroundColor: "red", color: "black"}); 
+                    currentDefender = this.id;
+                    enemyIsDead = false;
+                    $("#damage-stats").empty();
+                }
             }
         }
     });
@@ -105,15 +116,7 @@ $(document).ready(function() {
 
     });
 
-    $("#restart").click(function() {
-        $("#restart").hide();
-        $("#damage-stats").empty();
-        enemyIsDead = true;
-        currentPlayer = "";
-        currentDefender = "";
-        displayChoices();
-        $(".avatar").css({backgroundColor: "white", color: "black"});
-    });
+    $("#restart").click(restartGame);
 
 
 
