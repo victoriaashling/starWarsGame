@@ -1,0 +1,21 @@
+button {
+    height: auto;
+    margin: 1em;
+    /* background-color: aqua; */
+}
+
+button.avatar {
+    margin: 2em 1em;
+}
+
+img {
+    height: 150px;
+}
+
+p {
+    margin: .5em;
+}
+
+.row {
+    min-height: 100px;
+}

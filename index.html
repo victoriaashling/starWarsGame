@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Star Wars Game</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+    <header><h1 class="text-center">Star Wars Game</h1></header>
+
+    <div class="container text-center" id="game">
+
+        <div class="row justify-content-center" id="chooseChar">
+            <button id="porg" class="btn avatar"><p>Porg</p><img src="assets/images/porg.png" alt="Porg"><p id="porg-val"></p></button>
+            <button id="ewok" class="btn avatar"><p>Ewok</p><img src="assets/images/ewok.jpg" alt="Ewok"><p id="ewok-val"></p></button>
+            <button id="jawa" class="btn avatar"><p>Jawa</p><img src="assets/images/jawa.png" alt="Jawa"><p id="jawa-val"></p></button>
+            <button id="wookie" class="btn avatar"><p>Wookie</p><img src="assets/images/wookie.jpg" alt="Wookie"><p id="wookie-val"></p></button>
+        </div>
+
+        <div>
+            <div class="text-center"><h2>Enemies:</h2></div>
+            <div class="row justify-content-center" id="enemies"></div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-5">
+                <h2>Your Character:</h2>
+                <div id="playerChar"></div>
+            </div>
+
+            <div class="col-md-2 d-flex align-items-center">
+                <button class="btn btn-lg btn-secondary" id="attack">Attack</button>
+            </div>
+
+            <div class="col-md-5">
+                <h2>Defender:</h2>
+                <div id="defender"></div>
+                <div id="attackStats"></div>
+            </div>
+
+        </div>
+
+        <div class="row justify-content-center">
+            <p id="damage-stats"></p>
+        </div>
+
+        <div class="row justify-content-center">
+            <button class="btn btn-lg btn-secondary" id="restart">Restart</button>
+        </div>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="assets/javascript/javascript.js"></script>
+
+</body>
+
+</html>
