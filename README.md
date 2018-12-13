@@ -1,7 +1,3 @@
-# starWarsGame
+# Star Wars Game
 
-Basically, you play exactly as you do in the example game.
-
-It's not possible to both win and lose with each player, but I used the math from the example because I didn't feel like trying to figure that out and I figured the coding was more important anyway.
-
-It's still pretty messy -- I didn't really have time to clean it up and I know I didn't take full advantage of the ability to use objects. But I intend to go through and make it cleaner this week when I have more time.
+This is a simple javascript RPG game. Your first choice is the character you will play and then you may choose among the remaining three characters which to attack first. Both you and your enemy will get one attack per turn and your goal is to defeat all three enemies in succession. Not all characters can win, so be careful which you choose.
